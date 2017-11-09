@@ -23,7 +23,7 @@ class App extends React.Component {
       data: {user: term},
       dataType: 'text/plain'
     }).done(function(msg) {
-      console.log(msg);
+      console.log('done');
     }).fail(function(msg) {
       console.log(msg.statusText);
     });
