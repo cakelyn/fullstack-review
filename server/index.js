@@ -26,6 +26,7 @@ app.post('/repos', function (req, res) {
     });
   });
   res.sendStatus(201);
+  res.end()
 });
 
 app.get('/repos', function (req, res) {
@@ -34,8 +35,11 @@ app.get('/repos', function (req, res) {
   db.query(function(err, topRepos) {
     if (err) {
       console.log(err);
+      res.sendStatus(404);
+      res.end()
     } else {
       res.send(topRepos);
+      res.end()
     }
   });
 
@@ -46,9 +50,12 @@ app.get('/all', function(req, res) {
   db.grab(function(err, repos) {
     if (err) {
       console.log(err);
+      res.sendStatus(404);
+      res.end();
     } else {
       console.log(repos);
       res.send(repos);
+      res.end()
     }
   });
 });
