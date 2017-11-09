@@ -21,7 +21,7 @@ let save = (name, url, forks, owner_login, owner_url) => {
     owner_url: owner_url
   }).save(function(err) {
     if (err) {
-      console.log(err);
+      console.log('user already added');
     } else {
       console.log('saved to database');
     }
@@ -39,5 +39,11 @@ let query = (callback) => {
 
 }
 
+let grab = (callback) =>{
+  return Repo
+    .find({})
+    .exec(callback);
+}
 module.exports.save = save;
 module.exports.query = query;
+module.exports.grab = grab;

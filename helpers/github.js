@@ -15,7 +15,6 @@ let getReposByUsername = (user, callback) => {
     if (err) {
       console.log('Error requesting user repos: ', err);
     }
-    console.log(JSON.parse(data));
     callback(JSON.parse(data));
   });
 
