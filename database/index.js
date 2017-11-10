@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 mongoose.connect(`mongodb://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_SERVER}`, { useMongoClient: true });
 
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
 let repoSchema = mongoose.Schema({
   name: String,
   url: { type: String, unique: true },
