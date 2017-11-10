@@ -27,6 +27,7 @@
     "process-env": "^1.1.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-router": "^4.2.0",
     "request": "^2.81.0",
     "webpack": "^2.2.1"
   }
