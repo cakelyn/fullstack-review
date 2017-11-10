@@ -7,7 +7,7 @@
     "start": "node server/index.js",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
-    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
+    "postinstall": "npm run build"
   },
   "author": "Beth Johnson",
   "license": "ISC",
