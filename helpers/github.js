@@ -1,5 +1,4 @@
 const request = require('request');
-const config = require('../config.js');
 require('dotenv').config({ silent: true });
 
 let getReposByUsername = (user, callback) => {
