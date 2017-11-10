@@ -19,8 +19,5 @@ module.exports = {
         }
       }
     ]
-  },
-  resolveLoader: {
-      modulesDirectories: '/usr/local/lib/node_modules'
   }
 };
