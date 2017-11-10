@@ -1,11 +1,6 @@
 const request = require('request');
-// const config = require('../config.js');
-const aws = require('aws-sdk');
-
-let s3 = new aws.S3({
-  accessKeyId: process.env.SUCH_SECRET,
-  secretAccessKey: process.env.SUCH_SECRET
-});
+const config = require('../config.js');
+require('dotenv').config({ silent: true });
 
 let getReposByUsername = (user, callback) => {
 
@@ -13,7 +8,7 @@ let getReposByUsername = (user, callback) => {
     url: 'https://api.github.com/users/' + user + '/repos?per_page=100',
     headers: {
       'User-Agent': 'request',
-      'Authorization': `token ${s3.accessKeyId}`
+      'Authorization': `token ${process.env.SUCH_SECRET}`
     }
   };
 

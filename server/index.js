@@ -60,7 +60,8 @@ app.get('/all', function(req, res) {
   });
 });
 
-let port = 1128;
+app.set('port', (process.env.PORT || 3002));
+const port = app.get('port');
 
 app.listen(port, function() {
   console.log(`listening on port ${port}`);

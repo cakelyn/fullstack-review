@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server/index.js",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js"
   },
@@ -17,10 +18,13 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
+    "aws-sdk": "^2.149.0",
     "body-parser": "^1.17.0",
+    "dotenv": "^4.0.0",
     "express": "^4.15.0",
     "jquery": "^3.1.1",
     "mongoose": "^4.9.6",
+    "process-env": "^1.1.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "request": "^2.81.0"
